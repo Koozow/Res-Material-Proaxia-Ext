@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="https://unpkg.com/fundamental-styles" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+
+
+    <title>proaxia Extension</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  </head>
+  <body>
+
+    <script src="https://unpkg.com/fsm-shell"></script>
+    <script src="helpers.js"></script>
+    
+    
+
+
+
+    <style type="text/css">
+
+      h1{
+        text-align: center;
+        margin: 50px; 
+        color:white; 
+        background: blue; 
+        width: 55%;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      form{
+        width: 100%;
+
+      }
+/*      form  { display: table;      }
+p     { display: table-row;  }
+label { display: table-cell; }
+input { display: table-cell; }
+*/
+  .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  margin: 2px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+/* for the drop down button that hide and show the form */
+  .btnspecial {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 8px 10px;
+  font-size: 8px;
+  cursor: pointer;
+
+}
+.btnspecial:hover {
+  background-color: RoyalBlue;
+}
+
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #f44336;
+}
+.button2:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+    </style>
+<div class="container">
+
+
+
+
+
+   <script type="text/javascript">
+    function showForm(a) {
+        if(a==1)
+        document.getElementById("formElement").style.display="none";
+    else
+        document.getElementById("formElement").style.display="block";
+    }
+</script>
+
+<img src="https://www.xing.com/imagecache/public/scaled_original_image/eyJ1dWlkIjoiMTdkYmNkMGYtY2I3OC00MGVhLWExNmEtODZjNDAzZjIyMDUyIiwiYXBwX2NvbnRleHQiOiJlbnRpdHktcGFnZXMiLCJtYXhfd2lkdGgiOjMyMCwibWF4X2hlaWdodCI6MzIwfQ?signature=75a9f27dd488466260c2571102d14d1d8366b3c7006ea33bddcff24cb224a389" alt="proaxia" style="width:75px; height:75px;" align="right">
+
+<button onclick="showForm(2)" class="btnspecial" align="left"><i class="fa fa-bars"></i></button>
+<button onclick="showForm(1)" class="btnspecial" id="closeform"><i class="fa fa-close"></i></button>
+
+
+
+  
+  <table class="table table-bordered data-table" id="parentss">
+    <thead>
+      <th>Res No</th>
+      <th>Item Code</th>
+      <th>Item Name</th>
+      <th>Quantity</th>
+      <th>Unit</th>
+      <th>Plant</th>
+      <th>Storage Location</th>
+      <th>Warehouse</th>
+      <th>Arrival Date</th>
+      <th>Owner</th>
+      <th>Action</th>
+    </thead>
+    <tbody>
+      
+    </tbody>
+  </table>
+
+<script type="text/javascript">
+    function hideForm() {
+        document.getElementById('formElement').style.display = 'none';
+        document.getElementById('closeform').style.display = 'none';
+    }
+</script>
+
+ <form id="formElement" style="display: none;">
+    <div class="form-group">
+      <label>Res Number:</label>
+      <input type="text" name="resnumber" value="Kozo">
+      <label>Item Code:</label>
+      <input type="text" name="itemcode" value="Proaxia">
+      <label for="fname">Item Name:</label>
+      <input type="text" name="itemname" value="">
+      <label for="lname">Quantity:</label>
+      <input type="text" name="quantity" value="">
+      <label for="lname">Unit:</label>
+      <input type="text" name="unit" value=""><br>
+
+      <label for="lname">Plant:</label>
+      <input type="text" name="plant" value="">
+      <label for="lname">Storage Location:</label>
+      <input type="text" name="storagelocation" value="">
+      <label for="lname">Warehouse:</label>
+      <input type="text" name="warehouse" value="">
+      <label for="lname">Arrival Date:</label>
+      <input type="text" name="arrivaldate" value="">
+      <label for="lname">Owner:</label>
+      <input type="text" name="owner" value="">
+      
+
+    </div>
+    <button type="submit" class="button button1">Save</button>
+
+</form>
+
+    
+    
+
+
+
+</div>
+   <script type="text/javascript">
+    $("form").submit(function(e) {
+      e.preventDefault();
+      var name=$("input[name='resnumber']").val();
+      var email=$("input[name='itemcode']").val();
+      var itemname=$("input[name='itemname']").val();
+      var quantity=$("input[name='quantity']").val();
+      var unit=$("input[name='unit']").val();
+      var plant=$("input[name='plant']").val();
+      var storagelocation=$("input[name='storagelocation']").val();
+      var warehouse=$("input[name='warehouse']").val();
+      var arrivaldate=$("input[name='arrivaldate']").val();
+      var owner=$("input[name='owner']").val();
+      var action=$("input[name='action']").val();
+
+
+       $(".data-table tbody").append("<tr data-name='"+name+"' data-email='"+email+"' data-itemname='"+itemname+"' data-quantity='"+quantity+"' data-unit='"+unit+"' data-plant='"+plant+"'data-sotragelocation='"+storagelocation+"'data-warehouse='"+warehouse+"'data-arrivaldate='"+arrivaldate+"'data-owner='"+owner+"'><td>"+name+"</td><td>"+email+"</td><td>"+itemname+"</td><td>"+quantity+"</td><td>"+unit+"</td><td>"+plant+"</td><td>"+storagelocation+"</td><td>"+warehouse+"</td><td>"+arrivaldate+"</td><td>"+owner+"</td><td><button class='btn btn-danger btn-lg btn-delete mr-3' type='button'>Delete</button><button class='btn btn-info btn-lg btn-edit' type='button'>Edit</button></td></tr>");
+
+       $("input[name='']").val("");
+    });
+
+    $('body').on('click','.btn-delete',function() {
+      $(this).parents('tr').remove();
+    });
+
+
+
+    $('body').on('click','.btn-edit',function() {
+      var name=$(this).parents('tr').attr('data-name');
+      var email=$(this).parents('tr').attr('data-email');
+      var itemname=$(this).parents('tr').attr('data-itemname');
+      var quantity=$(this).parents('tr').attr('data-quantity');
+      var unit=$(this).parents('tr').attr('data-unit');
+      var plant=$(this).parents('tr').attr('data-plant');
+      var storagelocation=$(this).parents('tr').attr('data-sotragelocation');
+      var warehouse=$(this).parents('tr').attr('data-warehouse');
+      var arrivaldate=$(this).parents('tr').attr('data-arrivaldate');
+      var owner=$(this).parents('tr').attr('data-owner');
+
+      $(this).parents('tr').find('td:eq(0)').html("<input name='edit_text' value='"+name+"'>");
+      $(this).parents('tr').find('td:eq(1)').html("<input name='edit_email' value='"+email+"'>");
+      $(this).parents('tr').find('td:eq(2)').html("<input name='edit_itemname' value='"+itemname+"'>");
+      $(this).parents('tr').find('td:eq(3)').html("<input name='edit_quantity' value='"+quantity+"'>");
+      $(this).parents('tr').find('td:eq(4)').html("<input name='edit_unit' value='"+unit+"'>");
+      $(this).parents('tr').find('td:eq(5)').html("<input name='edit_plant' value='"+plant+"'>");
+      $(this).parents('tr').find('td:eq(6)').html("<input name='edit_storagelocation' value='"+storagelocation+"'>");
+      $(this).parents('tr').find('td:eq(7)').html("<input name='edit_warehouse' value='"+warehouse+"'>");
+      $(this).parents('tr').find('td:eq(8)').html("<input name='edit_arrivaldate' value='"+arrivaldate+"'>");
+      $(this).parents('tr').find('td:eq(9)').html("<input name='edit_owner' value='"+owner+"'>");
+
+      $(this).parents('tr').find('td:eq(10)').prepend("<button type='button' class='btn btn-info btn-lg btn-update mr-3'>Update</button>");
+      $(this).hide()
+    });
+
+    $('body').on('click','.btn-update',function() {
+      var name=$(this).parents('tr').find("input[name='edit_text']").val();
+      var email=$(this).parents('tr').find("input[name='edit_email']").val();
+      var itemname=$(this).parents('tr').find("input[name='edit_itemname']").val();
+      var quantity=$(this).parents('tr').find("input[name='edit_quantity']").val();
+      var unit=$(this).parents('tr').find("input[name='edit_unit']").val();
+      var plant=$(this).parents('tr').find("input[name='edit_plant']").val();
+      var storagelocation=$(this).parents('tr').find("input[name='edit_storagelocation']").val();
+      var warehouse=$(this).parents('tr').find("input[name='edit_warehouse']").val();
+      var arrivaldate=$(this).parents('tr').find("input[name='edit_arrivaldate']").val();
+      var owner=$(this).parents('tr').find("input[name='edit_owner']").val();
+
+      $(this).parents('tr').find('td:eq(0)').text(name);
+      $(this).parents('tr').find('td:eq(1)').text(email);
+      $(this).parents('tr').find('td:eq(2)').text(itemname);
+      $(this).parents('tr').find('td:eq(3)').text(quantity);
+      $(this).parents('tr').find('td:eq(4)').text(unit);
+      $(this).parents('tr').find('td:eq(5)').text(plant);
+      $(this).parents('tr').find('td:eq(6)').text(storagelocation);
+      $(this).parents('tr').find('td:eq(7)').text(warehouse);
+      $(this).parents('tr').find('td:eq(8)').text(arrivaldate);
+      $(this).parents('tr').find('td:eq(9)').text(owner);
+
+      $(this).parents('tr').attr('data-name',name);
+      $(this).parents('tr').attr('data-email',email);
+      $(this).parents('tr').attr('data-itemname',itemname);
+      $(this).parents('tr').attr('data-quantity',quantity);
+      $(this).parents('tr').attr('data-unit',unit);
+      $(this).parents('tr').attr('data-plant',plant);
+      $(this).parents('tr').attr('data-sotragelocation',storagelocation);
+      $(this).parents('tr').attr('data-warehouse',warehouse);
+      $(this).parents('tr').attr('data-arrivaldate',arrivaldate);
+      $(this).parents('tr').attr('data-owner',owner);
+
+      $(this).parents('tr').find('.btn-edit').show();
+      $(this).parents('tr').find('.btn-update').remove();
+
+
+    })
+
+
+
+
+
+
+   </script>
+
+
+
+</div>
+
+  </body>
+</html>
